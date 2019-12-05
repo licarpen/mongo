@@ -22,7 +22,6 @@ describe('Plant model', () => {
     const route = new Route({
       grade: 5.0
     });
-    console.log(route.validateSync());
     expect(route.validateSync().errors.grade.message)
       .toEqual('Path `grade` (5) is less than minimum allowed value (5.5).'); 
   });
