@@ -1,11 +1,12 @@
 {
-  "name": "starter-code",
+  "name": "mongoose models",
   "version": "1.0.0",
   "description": "",
   "main": "players-schema.js",
   "scripts": {
     "test": "jest --verbose",
-    "test-watch": "jest --watchAll --verbose --coverage"
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "lint": "eslint '**/*.js'"
   },
   "jest": {
     "testEnvironment": "node"
@@ -14,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mongoose": "^5.7.13",
     "uuid": "^3.3.2"
   },
   "repository": {
