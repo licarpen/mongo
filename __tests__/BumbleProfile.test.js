@@ -9,27 +9,27 @@ describe('Bumble profile model', () => {
   it('has required age', () => {
     const bumbleProfile = new BumbleProfile({});
     expect(bumbleProfile.validateSync().errors.age.message)
-      .toEqual('Path `crag` is required.');
+      .toEqual('Path `age` is required.');
   });
   it('age is above minimum of 18', () => {
     const bumbleProfile = new BumbleProfile({
       age: 16
     });
     expect(bumbleProfile.validateSync().errors.age.message)
-      .toEqual('Cast to Number failed for value \"v-hard\" at path \"grade\"');
+      .toEqual('Path `age` (16) is less than minimum allowed value (18).');
   });
   it('has type fishPhoto as a boolean', () => {
     const bumbleProfile = new BumbleProfile({
       sledPhoto: 'BRAAAAAAAAP'
     });
     expect(bumbleProfile.validateSync().errors.sledPhoto.message)
-      .toEqual('Path `grade` (5) is less than minimum allowed value (5.5).'); 
+      .toEqual('Cast to Boolean failed for value \"BRAAAAAAAAP\" at path \"sledPhoto\"'); 
   });
   it('has type gunPhoto as a boolean', () => {
     const bumbleProfile = new BumbleProfile({
       gunPhoto: 'I love guns'
     });
     expect(bumbleProfile.validateSync().errors.gunPhoto.message)
-      .toEqual('Path `grade` (5.17) is less than minimum allowed value (5.5).'); 
+      .toEqual('Cast to Boolean failed for value \"I love guns\" at path \"gunPhoto\"'); 
   });
 });
