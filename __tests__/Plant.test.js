@@ -24,7 +24,6 @@ describe('Plant model', () => {
     const plant = new Plant({
       pH: -1
     });
-    console.log(plant.validateSync());
     expect(plant.validateSync().errors.pH.message)
       .toEqual('Path `pH` (-1) is less than minimum allowed value (0).'); 
   });
