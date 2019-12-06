@@ -19,6 +19,9 @@
     "test:watch": "npm runtest -- --watchAll",
     "lint": "eslint '**/*.js'"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/licarpen/mongo.git"
