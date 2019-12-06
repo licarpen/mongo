@@ -27,9 +27,9 @@ describe('Bumble profile model', () => {
   });
   it('has type gunPhoto as a boolean', () => {
     const bumbleProfile = new BumbleProfile({
-      gunPhoto: 'I love guns'
+      gunPhoto: 'AR154EVA@me.com'
     });
     expect(bumbleProfile.validateSync().errors.gunPhoto.message)
-      .toEqual('Cast to Boolean failed for value \"I love guns\" at path \"gunPhoto\"'); 
+      .toEqual('Cast to Boolean failed for value \"AR154EVA@me.com\" at path \"gunPhoto\"'); 
   });
 });
