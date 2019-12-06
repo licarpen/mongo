@@ -1,4 +1,4 @@
-const BumbleProfile = require('../lib/models/bumbleProfile');
+const BumbleProfile = require('../lib/models/BumbleProfile');
 
 describe('Bumble profile model', () => {
   it('has a required name', () => {

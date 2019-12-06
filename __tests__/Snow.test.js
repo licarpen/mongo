@@ -1,4 +1,4 @@
-const Snow = require('../lib/models/snow');
+const Snow = require('../lib/models/Snow');
 
 describe('Snow model', () => {
   it('has a required depth', () => {
